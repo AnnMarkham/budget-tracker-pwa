@@ -1,4 +1,5 @@
 //Files to Cache
+
 const FILES_TO_CACHE = [
     "/index.html",
     "/css/style.css",
@@ -23,7 +24,8 @@ self.addEventListener('install', function (e) {
       caches.open(CACHE_NAME).then(function (cache) {
         return cache.addAll(FILES_TO_CACHE)
       })
-    )
+    );
+    self.skipWaiting();
   });
 
   //Activate the Service Worker -- event fires after previously cached data has been removed
@@ -40,6 +42,7 @@ self.addEventListener('install', function (e) {
         );
       })
     );
+    self.clients.claim();
   });
 
 
