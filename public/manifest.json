@@ -1,6 +1,6 @@
 {
-  "name": "Budget",
-  "short_name": "Budget",
+  "name": "budget",
+  "short_name": "budget",
   "icons": [
     {
       "src": "icons/icon-72x72.png",
